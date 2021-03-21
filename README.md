@@ -1,9 +1,6 @@
 # Workout_Tracker
 
-
-# Unit 17 NoSQL Homework: Workout Tracker
-
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+<b>Deployed Link:</b> 
 
 ## User Story
 
@@ -13,11 +10,9 @@ For this assignment, you'll create a workout tracker. You have already been prov
 
 A consumer will reach their fitness goals more quickly when they track their workout progress.
 
-## Acceptance Criteria
+When the user loads the page, they are given the option to create a new workout or continue with their last workout.
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
-
-The user should be able to:
+The user can:
 
   * Add exercises to the most recent workout plan.
 
@@ -27,38 +22,58 @@ The user should be able to:
 
   * View the total duration of each workout from the past seven workouts on the `stats` page.
 
-> **Important:** Look into using a MongoDB aggregate function to dynamically add up and return the total duration for each workout. Check out the [MongoDB documentation on the $addFields](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/), the [MongoDB documentation on the $sum operator](https://docs.mongodb.com/manual/reference/operator/aggregation/sum/), and the [Mongoose documentation on aggregate functions](https://mongoosejs.com/docs/api.html#aggregate_Aggregate) to learn how it can be accomplished.
+## Installation
 
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
+Clone this repository to your local machine.
 
-  * [Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
+Run npm install to install dependencies required for this project.
 
-  * [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
+Run node server.js to start the application.
 
-## Commit Early and Often
+Usage
+Create a new workout or add to an existing workout.
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
+Choose workout type from resistance or cardio.
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
+Fill out exercise details and add it to ongoing workout or mark it complete.
 
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
+View your progress over time on the dashboard and current stats on the homepage.
 
-Follow these guidelines for committing:
+## Technology
 
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
+1. MongoDB :
 
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
+MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era.
 
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
+MongoDB is a document database, which means it stores data in JSON-like documents.
 
-* Test your application before you commit to ensure functionality at every step in the development process.
+2. Mongoose :
 
-We want you to have well over 200 commits by graduation, so commit early and often!
+MongoDB object modeling for node.js.
 
-## Submission on BCS
+Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more.
 
-You are required to submit the following:
+3. Express.js :
 
-* The URL to the deployed application
+Web Applications : Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 
-* The URL to the GitHub repository
+APIs : With a myriad of HTTP utility methods and middleware, creating a robust API is quick and easy.
+
+4. Node.js :
+
+Node.js is an open-source and cross-platform JavaScript runtime environment.
+
+A Node.js app is run in a single process, without creating a new thread for every request.
+
+## Features
+
+NoSQL Database MongoDB is used to create database for this application.
+
+Express server is used to handle routing.
+
+Mongoose is used to create model schema.
+
+User can track workout progress by different charts on dashboard.
+
+Application is deployed to Heroku and MongoDB database is connected via MongoDB Atlas.
+
