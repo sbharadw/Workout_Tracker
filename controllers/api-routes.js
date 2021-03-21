@@ -32,9 +32,6 @@ router.get("/api/workouts/range", (req, res) => {
   router.get("/api/workouts/", (req, res) => {
     db.Fitness.aggregate([
       {
-        $limit: 7
-      },
-      {
         $addFields: {
           totalDuration: {$sum: "$exercises.duration"}
         }
@@ -47,7 +44,29 @@ router.get("/api/workouts/range", (req, res) => {
       .catch(err => {
         res.json(err);
       });
-  })
+  });
+
+  //set up a range for ordering the dashboard.
+    //Limiting the number of workouts to 7 and setting up a field for the sum of total duration of workouts.
+	router.get("/api/workouts/range", (req, res) => {
+        db.Fitness.aggregate([
+          {
+            $limit: 7
+          },
+          {
+            $addFields: {
+              totalDuration: {$sum: "$exercises.duration"}
+            }
+          },
+        ])
+          .then(Workouts => {
+            res.json(Workouts);
+          })
+          .catch(err => {
+            res.json(err);
+          });
+      });
+
 
 // POST workout
 router.post("/api/workouts", ({ body }, res) => {
@@ -70,6 +89,8 @@ router.put("/api/workouts/:id", ({ body, params }, res) => {
 			res.json(err);
 		});
 });
+
+
 
 // Export API routes
 module.exports = router;
