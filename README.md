@@ -1,6 +1,6 @@
 # Workout_Tracker
 
-<b>Deployed Link:</b> 
+<b>Deployed Link:</b> https://arcane-ocean-11718.herokuapp.com/
 
 ## User Story
 
